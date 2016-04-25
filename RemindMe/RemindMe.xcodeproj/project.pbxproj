@@ -14,6 +14,11 @@
 		22681CD41CCA689F00FC6EF9 /* RemindMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 22681CD21CCA689F00FC6EF9 /* RemindMe.xcdatamodeld */; };
 		22681CD61CCA689F00FC6EF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22681CD51CCA689F00FC6EF9 /* Assets.xcassets */; };
 		22681CD91CCA689F00FC6EF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22681CD71CCA689F00FC6EF9 /* LaunchScreen.storyboard */; };
+		2286BAF21CCE77C200EE7FBD /* RemindMeSplash-320x480.png in Resources */ = {isa = PBXBuildFile; fileRef = 2286BAED1CCE77C200EE7FBD /* RemindMeSplash-320x480.png */; settings = {ASSET_TAGS = (); }; };
+		2286BAF31CCE77C200EE7FBD /* RemindMeSplash-640x960.png in Resources */ = {isa = PBXBuildFile; fileRef = 2286BAEE1CCE77C200EE7FBD /* RemindMeSplash-640x960.png */; settings = {ASSET_TAGS = (); }; };
+		2286BAF41CCE77C200EE7FBD /* RemindMeSplash-640x1136.png in Resources */ = {isa = PBXBuildFile; fileRef = 2286BAEF1CCE77C200EE7FBD /* RemindMeSplash-640x1136.png */; settings = {ASSET_TAGS = (); }; };
+		2286BAF51CCE77C200EE7FBD /* RemindMeSplash-1242x2208.png in Resources */ = {isa = PBXBuildFile; fileRef = 2286BAF01CCE77C200EE7FBD /* RemindMeSplash-1242x2208.png */; settings = {ASSET_TAGS = (); }; };
+		2286BAF61CCE77C200EE7FBD /* RemindMeSplash750x1334.png in Resources */ = {isa = PBXBuildFile; fileRef = 2286BAF11CCE77C200EE7FBD /* RemindMeSplash750x1334.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		22681CD51CCA689F00FC6EF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22681CD81CCA689F00FC6EF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22681CDA1CCA689F00FC6EF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2286BAED1CCE77C200EE7FBD /* RemindMeSplash-320x480.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RemindMeSplash-320x480.png"; sourceTree = "<group>"; };
+		2286BAEE1CCE77C200EE7FBD /* RemindMeSplash-640x960.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RemindMeSplash-640x960.png"; sourceTree = "<group>"; };
+		2286BAEF1CCE77C200EE7FBD /* RemindMeSplash-640x1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RemindMeSplash-640x1136.png"; sourceTree = "<group>"; };
+		2286BAF01CCE77C200EE7FBD /* RemindMeSplash-1242x2208.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RemindMeSplash-1242x2208.png"; sourceTree = "<group>"; };
+		2286BAF11CCE77C200EE7FBD /* RemindMeSplash750x1334.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RemindMeSplash750x1334.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +87,11 @@
 		22681CC61CCA689F00FC6EF9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2286BAED1CCE77C200EE7FBD /* RemindMeSplash-320x480.png */,
+				2286BAEE1CCE77C200EE7FBD /* RemindMeSplash-640x960.png */,
+				2286BAEF1CCE77C200EE7FBD /* RemindMeSplash-640x1136.png */,
+				2286BAF01CCE77C200EE7FBD /* RemindMeSplash-1242x2208.png */,
+				2286BAF11CCE77C200EE7FBD /* RemindMeSplash750x1334.png */,
 				22681CC71CCA689F00FC6EF9 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -140,9 +155,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2286BAF61CCE77C200EE7FBD /* RemindMeSplash750x1334.png in Resources */,
+				2286BAF41CCE77C200EE7FBD /* RemindMeSplash-640x1136.png in Resources */,
 				22681CD91CCA689F00FC6EF9 /* LaunchScreen.storyboard in Resources */,
 				22681CD61CCA689F00FC6EF9 /* Assets.xcassets in Resources */,
+				2286BAF51CCE77C200EE7FBD /* RemindMeSplash-1242x2208.png in Resources */,
 				22681CD11CCA689F00FC6EF9 /* Main.storyboard in Resources */,
+				2286BAF21CCE77C200EE7FBD /* RemindMeSplash-320x480.png in Resources */,
+				2286BAF31CCE77C200EE7FBD /* RemindMeSplash-640x960.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +323,7 @@
 				22681CDF1CCA689F00FC6EF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

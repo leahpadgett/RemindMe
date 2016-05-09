@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		220B68EA1CCE808000FB1D9E /* SourceSansPro-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 220B68DE1CCE808000FB1D9E /* SourceSansPro-Black.otf */; };
+		220B68EB1CCE808000FB1D9E /* SourceSansPro-BlackIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 220B68DF1CCE808000FB1D9E /* SourceSansPro-BlackIt.otf */; };
+		220B68EC1CCE808000FB1D9E /* SourceSansPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 220B68E01CCE808000FB1D9E /* SourceSansPro-Bold.otf */; };
+		220B68ED1CCE808000FB1D9E /* SourceSansPro-BoldIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 220B68E11CCE808000FB1D9E /* SourceSansPro-BoldIt.otf */; };
+		220B68EE1CCE808000FB1D9E /* SourceSansPro-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 220B68E21CCE808000FB1D9E /* SourceSansPro-ExtraLight.otf */; };
+		220B68EF1CCE808000FB1D9E /* SourceSansPro-ExtraLightIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 220B68E31CCE808000FB1D9E /* SourceSansPro-ExtraLightIt.otf */; };
+		220B68F01CCE808000FB1D9E /* SourceSansPro-It.otf in Resources */ = {isa = PBXBuildFile; fileRef = 220B68E41CCE808000FB1D9E /* SourceSansPro-It.otf */; };
+		220B68F11CCE808000FB1D9E /* SourceSansPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 220B68E51CCE808000FB1D9E /* SourceSansPro-Light.otf */; };
+		220B68F21CCE808000FB1D9E /* SourceSansPro-LightIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 220B68E61CCE808000FB1D9E /* SourceSansPro-LightIt.otf */; };
+		220B68F31CCE808000FB1D9E /* SourceSansPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 220B68E71CCE808000FB1D9E /* SourceSansPro-Regular.otf */; };
+		220B68F41CCE808000FB1D9E /* SourceSansPro-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 220B68E81CCE808000FB1D9E /* SourceSansPro-Semibold.otf */; };
+		220B68F51CCE808000FB1D9E /* SourceSansPro-SemiboldIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 220B68E91CCE808000FB1D9E /* SourceSansPro-SemiboldIt.otf */; };
+		220B68F91CCE9B9B00FB1D9E /* RemindMeAddButton.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 220B68F81CCE9B9B00FB1D9E /* RemindMeAddButton.pdf */; };
 		22681CC81CCA689F00FC6EF9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22681CC71CCA689F00FC6EF9 /* main.m */; };
 		22681CCB1CCA689F00FC6EF9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22681CCA1CCA689F00FC6EF9 /* AppDelegate.m */; };
 		22681CCE1CCA689F00FC6EF9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22681CCD1CCA689F00FC6EF9 /* ViewController.m */; };
@@ -14,14 +27,28 @@
 		22681CD41CCA689F00FC6EF9 /* RemindMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 22681CD21CCA689F00FC6EF9 /* RemindMe.xcdatamodeld */; };
 		22681CD61CCA689F00FC6EF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22681CD51CCA689F00FC6EF9 /* Assets.xcassets */; };
 		22681CD91CCA689F00FC6EF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22681CD71CCA689F00FC6EF9 /* LaunchScreen.storyboard */; };
-		2286BAF21CCE77C200EE7FBD /* RemindMeSplash-320x480.png in Resources */ = {isa = PBXBuildFile; fileRef = 2286BAED1CCE77C200EE7FBD /* RemindMeSplash-320x480.png */; settings = {ASSET_TAGS = (); }; };
-		2286BAF31CCE77C200EE7FBD /* RemindMeSplash-640x960.png in Resources */ = {isa = PBXBuildFile; fileRef = 2286BAEE1CCE77C200EE7FBD /* RemindMeSplash-640x960.png */; settings = {ASSET_TAGS = (); }; };
-		2286BAF41CCE77C200EE7FBD /* RemindMeSplash-640x1136.png in Resources */ = {isa = PBXBuildFile; fileRef = 2286BAEF1CCE77C200EE7FBD /* RemindMeSplash-640x1136.png */; settings = {ASSET_TAGS = (); }; };
-		2286BAF51CCE77C200EE7FBD /* RemindMeSplash-1242x2208.png in Resources */ = {isa = PBXBuildFile; fileRef = 2286BAF01CCE77C200EE7FBD /* RemindMeSplash-1242x2208.png */; settings = {ASSET_TAGS = (); }; };
-		2286BAF61CCE77C200EE7FBD /* RemindMeSplash750x1334.png in Resources */ = {isa = PBXBuildFile; fileRef = 2286BAF11CCE77C200EE7FBD /* RemindMeSplash750x1334.png */; settings = {ASSET_TAGS = (); }; };
+		2286BAF21CCE77C200EE7FBD /* RemindMeSplash-320x480.png in Resources */ = {isa = PBXBuildFile; fileRef = 2286BAED1CCE77C200EE7FBD /* RemindMeSplash-320x480.png */; };
+		2286BAF31CCE77C200EE7FBD /* RemindMeSplash-640x960.png in Resources */ = {isa = PBXBuildFile; fileRef = 2286BAEE1CCE77C200EE7FBD /* RemindMeSplash-640x960.png */; };
+		2286BAF41CCE77C200EE7FBD /* RemindMeSplash-640x1136.png in Resources */ = {isa = PBXBuildFile; fileRef = 2286BAEF1CCE77C200EE7FBD /* RemindMeSplash-640x1136.png */; };
+		2286BAF51CCE77C200EE7FBD /* RemindMeSplash-1242x2208.png in Resources */ = {isa = PBXBuildFile; fileRef = 2286BAF01CCE77C200EE7FBD /* RemindMeSplash-1242x2208.png */; };
+		2286BAF61CCE77C200EE7FBD /* RemindMeSplash750x1334.png in Resources */ = {isa = PBXBuildFile; fileRef = 2286BAF11CCE77C200EE7FBD /* RemindMeSplash750x1334.png */; };
+		2286BAF81CCE7DF600EE7FBD /* RemindMelogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2286BAF71CCE7DF600EE7FBD /* RemindMelogo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		220B68DE1CCE808000FB1D9E /* SourceSansPro-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Black.otf"; sourceTree = "<group>"; };
+		220B68DF1CCE808000FB1D9E /* SourceSansPro-BlackIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-BlackIt.otf"; sourceTree = "<group>"; };
+		220B68E01CCE808000FB1D9E /* SourceSansPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Bold.otf"; sourceTree = "<group>"; };
+		220B68E11CCE808000FB1D9E /* SourceSansPro-BoldIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-BoldIt.otf"; sourceTree = "<group>"; };
+		220B68E21CCE808000FB1D9E /* SourceSansPro-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-ExtraLight.otf"; sourceTree = "<group>"; };
+		220B68E31CCE808000FB1D9E /* SourceSansPro-ExtraLightIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-ExtraLightIt.otf"; sourceTree = "<group>"; };
+		220B68E41CCE808000FB1D9E /* SourceSansPro-It.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-It.otf"; sourceTree = "<group>"; };
+		220B68E51CCE808000FB1D9E /* SourceSansPro-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Light.otf"; sourceTree = "<group>"; };
+		220B68E61CCE808000FB1D9E /* SourceSansPro-LightIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-LightIt.otf"; sourceTree = "<group>"; };
+		220B68E71CCE808000FB1D9E /* SourceSansPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Regular.otf"; sourceTree = "<group>"; };
+		220B68E81CCE808000FB1D9E /* SourceSansPro-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Semibold.otf"; sourceTree = "<group>"; };
+		220B68E91CCE808000FB1D9E /* SourceSansPro-SemiboldIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-SemiboldIt.otf"; sourceTree = "<group>"; };
+		220B68F81CCE9B9B00FB1D9E /* RemindMeAddButton.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = RemindMeAddButton.pdf; sourceTree = "<group>"; };
 		22681CC31CCA689F00FC6EF9 /* RemindMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemindMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22681CC71CCA689F00FC6EF9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		22681CC91CCA689F00FC6EF9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -38,6 +65,7 @@
 		2286BAEF1CCE77C200EE7FBD /* RemindMeSplash-640x1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RemindMeSplash-640x1136.png"; sourceTree = "<group>"; };
 		2286BAF01CCE77C200EE7FBD /* RemindMeSplash-1242x2208.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RemindMeSplash-1242x2208.png"; sourceTree = "<group>"; };
 		2286BAF11CCE77C200EE7FBD /* RemindMeSplash750x1334.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RemindMeSplash750x1334.png; sourceTree = "<group>"; };
+		2286BAF71CCE7DF600EE7FBD /* RemindMelogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RemindMelogo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +79,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		220B68DD1CCE808000FB1D9E /* SourceSansPro */ = {
+			isa = PBXGroup;
+			children = (
+				220B68DE1CCE808000FB1D9E /* SourceSansPro-Black.otf */,
+				220B68DF1CCE808000FB1D9E /* SourceSansPro-BlackIt.otf */,
+				220B68E01CCE808000FB1D9E /* SourceSansPro-Bold.otf */,
+				220B68E11CCE808000FB1D9E /* SourceSansPro-BoldIt.otf */,
+				220B68E21CCE808000FB1D9E /* SourceSansPro-ExtraLight.otf */,
+				220B68E31CCE808000FB1D9E /* SourceSansPro-ExtraLightIt.otf */,
+				220B68E41CCE808000FB1D9E /* SourceSansPro-It.otf */,
+				220B68E51CCE808000FB1D9E /* SourceSansPro-Light.otf */,
+				220B68E61CCE808000FB1D9E /* SourceSansPro-LightIt.otf */,
+				220B68E71CCE808000FB1D9E /* SourceSansPro-Regular.otf */,
+				220B68E81CCE808000FB1D9E /* SourceSansPro-Semibold.otf */,
+				220B68E91CCE808000FB1D9E /* SourceSansPro-SemiboldIt.otf */,
+			);
+			path = SourceSansPro;
+			sourceTree = "<group>";
+		};
 		22681CBA1CCA689F00FC6EF9 = {
 			isa = PBXGroup;
 			children = (
@@ -78,7 +125,6 @@
 				22681CD51CCA689F00FC6EF9 /* Assets.xcassets */,
 				22681CD71CCA689F00FC6EF9 /* LaunchScreen.storyboard */,
 				22681CDA1CCA689F00FC6EF9 /* Info.plist */,
-				22681CD21CCA689F00FC6EF9 /* RemindMe.xcdatamodeld */,
 				22681CC61CCA689F00FC6EF9 /* Supporting Files */,
 			);
 			path = RemindMe;
@@ -87,11 +133,15 @@
 		22681CC61CCA689F00FC6EF9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				220B68F81CCE9B9B00FB1D9E /* RemindMeAddButton.pdf */,
+				22681CD21CCA689F00FC6EF9 /* RemindMe.xcdatamodeld */,
+				2286BAF71CCE7DF600EE7FBD /* RemindMelogo.png */,
 				2286BAED1CCE77C200EE7FBD /* RemindMeSplash-320x480.png */,
 				2286BAEE1CCE77C200EE7FBD /* RemindMeSplash-640x960.png */,
 				2286BAEF1CCE77C200EE7FBD /* RemindMeSplash-640x1136.png */,
 				2286BAF01CCE77C200EE7FBD /* RemindMeSplash-1242x2208.png */,
 				2286BAF11CCE77C200EE7FBD /* RemindMeSplash750x1334.png */,
+				220B68DD1CCE808000FB1D9E /* SourceSansPro */,
 				22681CC71CCA689F00FC6EF9 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -129,6 +179,11 @@
 					22681CC21CCA689F00FC6EF9 = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = UF3U66NFP6;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -158,11 +213,25 @@
 				2286BAF61CCE77C200EE7FBD /* RemindMeSplash750x1334.png in Resources */,
 				2286BAF41CCE77C200EE7FBD /* RemindMeSplash-640x1136.png in Resources */,
 				22681CD91CCA689F00FC6EF9 /* LaunchScreen.storyboard in Resources */,
+				220B68F21CCE808000FB1D9E /* SourceSansPro-LightIt.otf in Resources */,
+				220B68F41CCE808000FB1D9E /* SourceSansPro-Semibold.otf in Resources */,
+				220B68EF1CCE808000FB1D9E /* SourceSansPro-ExtraLightIt.otf in Resources */,
+				220B68EA1CCE808000FB1D9E /* SourceSansPro-Black.otf in Resources */,
+				220B68F31CCE808000FB1D9E /* SourceSansPro-Regular.otf in Resources */,
 				22681CD61CCA689F00FC6EF9 /* Assets.xcassets in Resources */,
 				2286BAF51CCE77C200EE7FBD /* RemindMeSplash-1242x2208.png in Resources */,
 				22681CD11CCA689F00FC6EF9 /* Main.storyboard in Resources */,
+				220B68F11CCE808000FB1D9E /* SourceSansPro-Light.otf in Resources */,
 				2286BAF21CCE77C200EE7FBD /* RemindMeSplash-320x480.png in Resources */,
+				220B68F91CCE9B9B00FB1D9E /* RemindMeAddButton.pdf in Resources */,
+				2286BAF81CCE7DF600EE7FBD /* RemindMelogo.png in Resources */,
 				2286BAF31CCE77C200EE7FBD /* RemindMeSplash-640x960.png in Resources */,
+				220B68ED1CCE808000FB1D9E /* SourceSansPro-BoldIt.otf in Resources */,
+				220B68F01CCE808000FB1D9E /* SourceSansPro-It.otf in Resources */,
+				220B68EE1CCE808000FB1D9E /* SourceSansPro-ExtraLight.otf in Resources */,
+				220B68EC1CCE808000FB1D9E /* SourceSansPro-Bold.otf in Resources */,
+				220B68F51CCE808000FB1D9E /* SourceSansPro-SemiboldIt.otf in Resources */,
+				220B68EB1CCE808000FB1D9E /* SourceSansPro-BlackIt.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,10 +355,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RemindMe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.leah-padgett.RemindMe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -297,10 +370,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RemindMe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.leah-padgett.RemindMe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

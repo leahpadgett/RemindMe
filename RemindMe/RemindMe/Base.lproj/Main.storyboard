@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="tSq-1c-e8F">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="SourceSansPro-Regular.otf">
@@ -32,7 +33,7 @@
                                     <navigationItem id="aUn-RW-wPb">
                                         <nil key="title"/>
                                         <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QIU-uh-BXr">
-                                            <rect key="frame" x="86" y="7" width="148" height="30"/>
+                                            <rect key="frame" x="82" y="7" width="156" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="16"/>
                                             <state key="normal" title="Upcoming Reminders">
@@ -70,10 +71,10 @@
             </objects>
             <point key="canvasLocation" x="686" y="304"/>
         </scene>
-        <!--View Controller-->
+        <!--Enter Reminder View Controller-->
         <scene sceneID="KnS-n9-HFo">
             <objects>
-                <viewController id="h39-PL-r70" sceneMemberID="viewController">
+                <viewController id="h39-PL-r70" customClass="EnterReminderViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kkA-mu-105"/>
                         <viewControllerLayoutGuide type="bottom" id="Vex-RN-3tZ"/>
@@ -82,35 +83,74 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Enter Reminder" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ChZ-ty-sS3">
-                                <rect key="frame" x="14" y="175" width="280" height="217"/>
-                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
-                                <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" spellCheckingType="yes" keyboardAppearance="light" returnKeyType="done"/>
-                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fzM-FS-wLg" customClass="UIPlaceHolderTextView">
+                                <rect key="frame" x="40" y="110" width="240" height="217"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.25490196079999999" green="0.14117647059999999" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fzM-FS-wLg" firstAttribute="top" secondItem="kkA-mu-105" secondAttribute="bottom" constant="46" id="BSd-bn-1S2"/>
+                            <constraint firstItem="Vex-RN-3tZ" firstAttribute="top" secondItem="fzM-FS-wLg" secondAttribute="bottom" constant="241" id="IOP-zi-he7"/>
+                            <constraint firstItem="fzM-FS-wLg" firstAttribute="centerX" secondItem="2eD-Wh-cvU" secondAttribute="centerX" id="ekN-V1-QJP"/>
+                            <constraint firstItem="fzM-FS-wLg" firstAttribute="leading" secondItem="2eD-Wh-cvU" secondAttribute="leadingMargin" constant="24" id="icl-va-WwC"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="NNG-F4-cHO"/>
+                    <navigationItem key="navigationItem" id="NNG-F4-cHO">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="22v-ma-eK2">
+                            <color key="tintColor" red="0.25490196079999999" green="0.14117647059999999" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="CancelButtonPressed:" destination="h39-PL-r70" id="kV4-VP-PMa"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Next" style="done" id="x0A-tA-ifb">
+                            <color key="tintColor" red="0.25490196079999999" green="0.14117647059999999" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="Yni-LY-b0X" kind="push" id="DsE-0M-XhC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oMb-sU-tUg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1197" y="304"/>
+            <point key="canvasLocation" x="1215" y="304"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Enter Schedule View Controller-->
+        <scene sceneID="dxI-pl-NMi">
+            <objects>
+                <viewController id="Yni-LY-b0X" customClass="EnterScheduleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HM9-D1-f1a"/>
+                        <viewControllerLayoutGuide type="bottom" id="in0-dD-V47"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tiN-r1-UaJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BHo-Dp-hZC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="clJ-rc-1i7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1666" y="298"/>
+        </scene>
+        <!--Upcoming Reminders-->
         <scene sceneID="Vfc-n7-Ja0">
             <objects>
-                <tableViewController id="Xpd-FJ-1fq" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="lC6-OR-Bls">
+                <tableViewController id="Xpd-FJ-1fq" customClass="UpcomingRemindersTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="76" sectionHeaderHeight="28" sectionFooterHeight="28" id="lC6-OR-Bls">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KwG-jf-cbG">
-                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="6" rowHeight="61" id="KwG-jf-cbG">
+                                <rect key="frame" x="0.0" y="92" width="320" height="61"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KwG-jf-cbG" id="6UN-WZ-Gqj">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="60.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -120,7 +160,7 @@
                             <outlet property="delegate" destination="Xpd-FJ-1fq" id="xay-li-LOn"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="cqx-gz-zrq"/>
+                    <navigationItem key="navigationItem" title="Upcoming Reminders" id="cqx-gz-zrq"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y49-V8-I36" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

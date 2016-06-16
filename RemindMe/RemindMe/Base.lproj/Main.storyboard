@@ -106,13 +106,16 @@
                                 <action selector="CancelButtonPressed:" destination="h39-PL-r70" id="kV4-VP-PMa"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Next" style="done" id="x0A-tA-ifb">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="x0A-tA-ifb">
                             <color key="tintColor" red="0.25490196079999999" green="0.14117647059999999" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="Yni-LY-b0X" kind="push" id="DsE-0M-XhC"/>
+                                <action selector="SaveButtonPressed:" destination="h39-PL-r70" id="rUc-Va-7YA"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="reminderTextField" destination="fzM-FS-wLg" id="y2z-F9-lIA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oMb-sU-tUg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -131,11 +134,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="BHo-Dp-hZC"/>
+                    <navigationItem key="navigationItem" id="BHo-Dp-hZC">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="flE-n7-HtO">
+                            <color key="tintColor" red="0.25490196079999999" green="0.14117647059999999" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="Yni-LY-b0X" id="9RO-qs-KRS"/>
+                                <segue destination="Xpd-FJ-1fq" kind="push" id="cqc-ov-BYe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="clJ-rc-1i7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1666" y="298"/>
+            <point key="canvasLocation" x="1670" y="304"/>
         </scene>
         <!--Upcoming Reminders-->
         <scene sceneID="Vfc-n7-Ja0">
@@ -146,12 +157,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="6" rowHeight="61" id="KwG-jf-cbG">
-                                <rect key="frame" x="0.0" y="92" width="320" height="61"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="6" reuseIdentifier="customcell" textLabel="Er0-8W-CWg" detailTextLabel="qyI-0E-8bf" rowHeight="61" style="IBUITableViewCellStyleSubtitle" id="KwG-jf-cbG">
+                                <rect key="frame" x="0.0" y="28" width="320" height="61"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KwG-jf-cbG" id="6UN-WZ-Gqj">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="60.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Er0-8W-CWg">
+                                            <rect key="frame" x="15" y="14" width="31.5" height="19.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qyI-0E-8bf">
+                                            <rect key="frame" x="15" y="33.5" width="40.5" height="13.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -160,11 +187,13 @@
                             <outlet property="delegate" destination="Xpd-FJ-1fq" id="xay-li-LOn"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Upcoming Reminders" id="cqx-gz-zrq"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y49-V8-I36" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1197" y="1098"/>
+            <point key="canvasLocation" x="1215" y="1096"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qq5-Gc-GhU">
@@ -188,4 +217,7 @@
     <resources>
         <image name="RemindMeAddButton" width="100" height="100"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="cqc-ov-BYe"/>
+    </inferredMetricsTieBreakers>
 </document>

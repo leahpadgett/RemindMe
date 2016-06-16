@@ -20,6 +20,8 @@
 		220B68F41CCE808000FB1D9E /* SourceSansPro-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 220B68E81CCE808000FB1D9E /* SourceSansPro-Semibold.otf */; };
 		220B68F51CCE808000FB1D9E /* SourceSansPro-SemiboldIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 220B68E91CCE808000FB1D9E /* SourceSansPro-SemiboldIt.otf */; };
 		220B68F91CCE9B9B00FB1D9E /* RemindMeAddButton.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 220B68F81CCE9B9B00FB1D9E /* RemindMeAddButton.pdf */; };
+		224D35EC1D00925A0070F816 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224D35EB1D00925A0070F816 /* CoreData.framework */; };
+		224D35F21D00CAE70070F816 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 224D35F11D00CAE70070F816 /* CoreDataStack.m */; };
 		22681CC81CCA689F00FC6EF9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22681CC71CCA689F00FC6EF9 /* main.m */; };
 		22681CCB1CCA689F00FC6EF9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22681CCA1CCA689F00FC6EF9 /* AppDelegate.m */; };
 		22681CCE1CCA689F00FC6EF9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22681CCD1CCA689F00FC6EF9 /* ViewController.m */; };
@@ -38,6 +40,9 @@
 		22E12B201CE0F0EF00498D03 /* EnterReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E12B1F1CE0F0EF00498D03 /* EnterReminderViewController.m */; };
 		22E12B231CE1066100498D03 /* EnterScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E12B221CE1066100498D03 /* EnterScheduleViewController.m */; };
 		22E12B251CE107F300498D03 /* RM logo.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 22E12B241CE107F300498D03 /* RM logo.pdf */; };
+		22E26D291D08F2810097DD7F /* RemindMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 22E26D271D08F2810097DD7F /* RemindMe.xcdatamodeld */; };
+		22E26D2E1D08F4480097DD7F /* ReminderEntry+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E26D2B1D08F4480097DD7F /* ReminderEntry+CoreDataProperties.m */; };
+		22E26D2F1D08F4480097DD7F /* ReminderEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E26D2D1D08F4480097DD7F /* ReminderEntry.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +59,9 @@
 		220B68E81CCE808000FB1D9E /* SourceSansPro-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Semibold.otf"; sourceTree = "<group>"; };
 		220B68E91CCE808000FB1D9E /* SourceSansPro-SemiboldIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-SemiboldIt.otf"; sourceTree = "<group>"; };
 		220B68F81CCE9B9B00FB1D9E /* RemindMeAddButton.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = RemindMeAddButton.pdf; sourceTree = "<group>"; };
+		224D35EB1D00925A0070F816 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		224D35F01D00CAE70070F816 /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataStack.h; path = RemindMe/CoreDataStack.h; sourceTree = SOURCE_ROOT; };
+		224D35F11D00CAE70070F816 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataStack.m; path = RemindMe/CoreDataStack.m; sourceTree = SOURCE_ROOT; };
 		22681CC31CCA689F00FC6EF9 /* RemindMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemindMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22681CC71CCA689F00FC6EF9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		22681CC91CCA689F00FC6EF9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -80,6 +88,11 @@
 		22E12B211CE1066100498D03 /* EnterScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterScheduleViewController.h; sourceTree = "<group>"; };
 		22E12B221CE1066100498D03 /* EnterScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterScheduleViewController.m; sourceTree = "<group>"; };
 		22E12B241CE107F300498D03 /* RM logo.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "RM logo.pdf"; sourceTree = "<group>"; };
+		22E26D281D08F2810097DD7F /* RemindMe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RemindMe.xcdatamodel; sourceTree = "<group>"; };
+		22E26D2A1D08F4480097DD7F /* ReminderEntry+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ReminderEntry+CoreDataProperties.h"; path = "RemindMe/ReminderEntry+CoreDataProperties.h"; sourceTree = "<group>"; };
+		22E26D2B1D08F4480097DD7F /* ReminderEntry+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ReminderEntry+CoreDataProperties.m"; path = "RemindMe/ReminderEntry+CoreDataProperties.m"; sourceTree = "<group>"; };
+		22E26D2C1D08F4480097DD7F /* ReminderEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReminderEntry.h; path = RemindMe/ReminderEntry.h; sourceTree = "<group>"; };
+		22E26D2D1D08F4480097DD7F /* ReminderEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReminderEntry.m; path = RemindMe/ReminderEntry.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				224D35EC1D00925A0070F816 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +129,10 @@
 		22681CBA1CCA689F00FC6EF9 = {
 			isa = PBXGroup;
 			children = (
+				22E26D2A1D08F4480097DD7F /* ReminderEntry+CoreDataProperties.h */,
+				22E26D2B1D08F4480097DD7F /* ReminderEntry+CoreDataProperties.m */,
+				22E26D2C1D08F4480097DD7F /* ReminderEntry.h */,
+				22E26D2D1D08F4480097DD7F /* ReminderEntry.m */,
 				22681CC51CCA689F00FC6EF9 /* RemindMe */,
 				22681CC41CCA689F00FC6EF9 /* Products */,
 			);
@@ -131,14 +149,13 @@
 		22681CC51CCA689F00FC6EF9 /* RemindMe */ = {
 			isa = PBXGroup;
 			children = (
+				224D35F01D00CAE70070F816 /* CoreDataStack.h */,
+				224D35F11D00CAE70070F816 /* CoreDataStack.m */,
 				22681CC91CCA689F00FC6EF9 /* AppDelegate.h */,
 				22681CCA1CCA689F00FC6EF9 /* AppDelegate.m */,
 				22681CCC1CCA689F00FC6EF9 /* ViewController.h */,
 				22681CCD1CCA689F00FC6EF9 /* ViewController.m */,
-				22E12B1E1CE0F0EF00498D03 /* EnterReminderViewController.h */,
-				22E12B1F1CE0F0EF00498D03 /* EnterReminderViewController.m */,
-				22E12B181CE0EB5E00498D03 /* UIPlaceHolderTextView.h */,
-				22E12B191CE0EB5E00498D03 /* UIPlaceHolderTextView.m */,
+				226C0ECE1D032B9B005E121E /* Enter Reminder View Controller */,
 				22E12B211CE1066100498D03 /* EnterScheduleViewController.h */,
 				22E12B221CE1066100498D03 /* EnterScheduleViewController.m */,
 				22B214901CE109C900B7E242 /* UpcomingRemindersTableViewController.h */,
@@ -147,6 +164,8 @@
 				22681CD51CCA689F00FC6EF9 /* Assets.xcassets */,
 				22681CD71CCA689F00FC6EF9 /* LaunchScreen.storyboard */,
 				22681CDA1CCA689F00FC6EF9 /* Info.plist */,
+				22E26D271D08F2810097DD7F /* RemindMe.xcdatamodeld */,
+				224D35EB1D00925A0070F816 /* CoreData.framework */,
 				22681CC61CCA689F00FC6EF9 /* Supporting Files */,
 			);
 			path = RemindMe;
@@ -168,6 +187,17 @@
 				22681CC71CCA689F00FC6EF9 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		226C0ECE1D032B9B005E121E /* Enter Reminder View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				22E12B1E1CE0F0EF00498D03 /* EnterReminderViewController.h */,
+				22E12B1F1CE0F0EF00498D03 /* EnterReminderViewController.m */,
+				22E12B181CE0EB5E00498D03 /* UIPlaceHolderTextView.h */,
+				22E12B191CE0EB5E00498D03 /* UIPlaceHolderTextView.m */,
+			);
+			name = "Enter Reminder View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +226,9 @@
 		22681CBB1CCA689F00FC6EF9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					Model.,
+				);
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Leah Padgett";
 				TargetAttributes = {
@@ -266,11 +299,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22E26D291D08F2810097DD7F /* RemindMe.xcdatamodeld in Sources */,
 				22681CCE1CCA689F00FC6EF9 /* ViewController.m in Sources */,
+				22E26D2F1D08F4480097DD7F /* ReminderEntry.m in Sources */,
+				22E26D2E1D08F4480097DD7F /* ReminderEntry+CoreDataProperties.m in Sources */,
 				22681CCB1CCA689F00FC6EF9 /* AppDelegate.m in Sources */,
 				22E12B1A1CE0EB5E00498D03 /* UIPlaceHolderTextView.m in Sources */,
 				22B214921CE109C900B7E242 /* UpcomingRemindersTableViewController.m in Sources */,
 				22681CD41CCA689F00FC6EF9 /* RemindMe.xcdatamodeld in Sources */,
+				224D35F21D00CAE70070F816 /* CoreDataStack.m in Sources */,
 				22681CC81CCA689F00FC6EF9 /* main.m in Sources */,
 				22E12B201CE0F0EF00498D03 /* EnterReminderViewController.m in Sources */,
 				22E12B231CE1066100498D03 /* EnterScheduleViewController.m in Sources */,
@@ -439,6 +476,16 @@
 				22681CD31CCA689F00FC6EF9 /* RemindMe.xcdatamodel */,
 			);
 			currentVersion = 22681CD31CCA689F00FC6EF9 /* RemindMe.xcdatamodel */;
+			path = RemindMe.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		22E26D271D08F2810097DD7F /* RemindMe.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				22E26D281D08F2810097DD7F /* RemindMe.xcdatamodel */,
+			);
+			currentVersion = 22E26D281D08F2810097DD7F /* RemindMe.xcdatamodel */;
 			path = RemindMe.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

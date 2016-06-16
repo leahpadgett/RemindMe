@@ -8,6 +8,10 @@
 
 #import "EnterReminderViewController.h"
 
+
 @interface EnterScheduleViewController : EnterReminderViewController
+
+
+- (IBAction)doneButtonPressed:(id)sender;
 
 @end

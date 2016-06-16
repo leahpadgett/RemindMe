@@ -7,8 +7,14 @@
 //
 
 #import "EnterReminderViewController.h"
+#import "UpcomingRemindersTableViewController.h"
+#import "CoreDataStack.h"
+#import "ReminderEntry+CoreDataProperties.h"
+#import "ReminderEntry.h"
 
 @interface EnterReminderViewController ()
+
+
 
 @end
 
@@ -22,11 +28,31 @@
     
 }
 
+-(void)insertReminderDetails {
+    
+    CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
+    ReminderEntry *entry = [NSEntityDescription insertNewObjectForEntityForName:@"ReminderEntry" inManagedObjectContext:coreDataStack.managedObjectContext];
+    
+    entry.details = self.reminderTextField.text;
+    entry.date = [[NSDate date] timeIntervalSince1970];
+    [coreDataStack saveContext];
+    
+}
 
 - (IBAction)CancelButtonPressed:(id)sender {
     
-    [self.navigationController popViewControllerAnimated:YES];
     
+      [self.navigationController popViewControllerAnimated:YES];
+  
     
 }
+
+- (IBAction)SaveButtonPressed:(id)sender {
+    [self insertReminderDetails];
+
+}
+
+
+
+
 @end

@@ -18,6 +18,7 @@
 
 @property (strong, nonatomic) IBOutlet UITextView *reminderTextField;
 
+@property (strong, nonatomic) IBOutlet UIDatePicker *datePicker;
 
 
 @end

@@ -83,13 +83,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fzM-FS-wLg" customClass="UIPlaceHolderTextView">
-                                <rect key="frame" x="40" y="110" width="240" height="217"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" keyboardDismissMode="interactive" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fzM-FS-wLg" customClass="UIPlaceHolderTextView">
+                                <rect key="frame" x="40" y="110" width="240" height="185"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.25490196079999999" green="0.14117647059999999" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="yes" keyboardAppearance="light" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textView>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="X3B-jz-B9X">
+                                <rect key="frame" x="0.0" y="352" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="488489384.35627502">
+                                    <!--2016-06-24 19:29:44 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -114,6 +120,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="datePicker" destination="X3B-jz-B9X" id="bXV-eh-t8D"/>
                         <outlet property="reminderTextField" destination="fzM-FS-wLg" id="y2z-F9-lIA"/>
                     </connections>
                 </viewController>
@@ -157,7 +164,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="6" reuseIdentifier="customcell" textLabel="Er0-8W-CWg" detailTextLabel="qyI-0E-8bf" rowHeight="61" style="IBUITableViewCellStyleSubtitle" id="KwG-jf-cbG">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="6" reuseIdentifier="Cell" textLabel="Er0-8W-CWg" detailTextLabel="qyI-0E-8bf" rowHeight="61" style="IBUITableViewCellStyleSubtitle" id="KwG-jf-cbG">
                                 <rect key="frame" x="0.0" y="28" width="320" height="61"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KwG-jf-cbG" id="6UN-WZ-Gqj">

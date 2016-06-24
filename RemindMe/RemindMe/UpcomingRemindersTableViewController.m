@@ -8,8 +8,13 @@
 
 #import "UpcomingRemindersTableViewController.h"
 #import "EnterReminderViewController.h"
+#import "CoreDataStack.h"
+#import "ReminderEntry.h"
+#import "ReminderEntry+CoreDataProperties.h"
 
-@interface UpcomingRemindersTableViewController ()
+@interface UpcomingRemindersTableViewController () <NSFetchedResultsControllerDelegate>
+
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 
 @end
 
@@ -18,9 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    
-    //self.clearsSelectionOnViewWillAppear = NO;
+    [self.fetchedResultsController performFetch:nil];
     
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
@@ -31,24 +34,27 @@
 }
 
 #pragma mark - Table view data source
-//
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//
-//    return 0;
-//}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+
+    return self.fetchedResultsController.sections.count;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
-    return 5;
+    id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections] [section];
+    return [sectionInfo numberOfObjects];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"customcell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    cell.textLabel.text = @"test";
+    ReminderEntry *entry = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    cell.textLabel.text = entry.details;
+  
+
     
     return cell;
 }
@@ -71,7 +77,33 @@
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
 }
 
+- (NSFetchRequest *)reminderListFetchRequest {
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"ReminderEntry"];
+    
+    fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO]];
+    
+    return fetchRequest;
+}
 
+
+- (NSFetchedResultsController *)fetchedResultsController {
+    if (_fetchedResultsController != nil) {
+        return _fetchedResultsController;
+    }
+    
+    CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
+    NSFetchRequest *fetchRequest = [self reminderListFetchRequest];
+    
+    _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:coreDataStack.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
+    _fetchedResultsController.delegate = self;
+    
+    return _fetchedResultsController;
+}
+
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
+    [self.tableView reloadData];
+}
 
 /*
 #pragma mark - Navigation

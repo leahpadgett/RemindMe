@@ -49,6 +49,7 @@
 
 - (IBAction)SaveButtonPressed:(id)sender {
     [self insertReminderDetails];
+      [self.navigationController popViewControllerAnimated:YES];
 
 }
 

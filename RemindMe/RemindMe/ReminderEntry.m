@@ -7,9 +7,12 @@
 //
 
 #import "ReminderEntry.h"
+#import "EnterReminderViewController.h"
 
 @implementation ReminderEntry
 
 // Insert code here to add functionality to your managed object subclass
+
+
 
 @end

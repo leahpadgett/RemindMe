@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ReminderEntry (CoreDataProperties)
 
-@property (nonatomic) NSTimeInterval date;
+@property (nonatomic, retain) NSDate  *date;
 @property (nullable, nonatomic, retain) NSString *details;
 
 @end

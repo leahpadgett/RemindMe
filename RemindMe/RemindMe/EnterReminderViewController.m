@@ -28,13 +28,21 @@
     
 }
 
+
+
 -(void)insertReminderDetails {
     
     CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
     ReminderEntry *entry = [NSEntityDescription insertNewObjectForEntityForName:@"ReminderEntry" inManagedObjectContext:coreDataStack.managedObjectContext];
+
+
     
     entry.details = self.reminderTextField.text;
-    entry.date = [[NSDate date] timeIntervalSince1970];
+    
+   
+//    entry.date =  self.datePicker;
+    
+   
     [coreDataStack saveContext];
     
 }
@@ -55,5 +63,13 @@
 
 
 
+- (IBAction)datePickerAction:(id)sender {
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+    [dateFormatter setTimeStyle:NSDateFormatterShortStyle];
+
+    
+}
 
 @end

@@ -95,6 +95,9 @@
                                 <date key="date" timeIntervalSinceReferenceDate="488489384.35627502">
                                     <!--2016-06-24 19:29:44 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="datePickerAction:" destination="h39-PL-r70" eventType="valueChanged" id="SBj-ff-59g"/>
+                                </connections>
                             </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

@@ -40,7 +40,7 @@
     entry.details = self.reminderTextField.text;
     
    
-//    entry.date =  self.datePicker;
+    entry.date =  self.datePicker.date;
     
    
     [coreDataStack saveContext];

@@ -54,10 +54,7 @@
     ReminderEntry *entry = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
     cell.textLabel.text = entry.details;
-
-    
-    
-//    cell.detailTextLabel.text = entry.date;
+    cell.detailTextLabel.text = entry.date.description;
     
     
     

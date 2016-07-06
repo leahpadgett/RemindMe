@@ -167,11 +167,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="6" reuseIdentifier="Cell" textLabel="Er0-8W-CWg" detailTextLabel="qyI-0E-8bf" rowHeight="61" style="IBUITableViewCellStyleSubtitle" id="KwG-jf-cbG">
-                                <rect key="frame" x="0.0" y="28" width="320" height="61"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="6" reuseIdentifier="Cell" textLabel="Er0-8W-CWg" detailTextLabel="qyI-0E-8bf" rowHeight="61" style="IBUITableViewCellStyleSubtitle" id="KwG-jf-cbG">
+                                <rect key="frame" x="0.0" y="92" width="320" height="61"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KwG-jf-cbG" id="6UN-WZ-Gqj">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="60.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="60.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Er0-8W-CWg">
@@ -190,6 +190,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="h39-PL-r70" kind="push" identifier="edit" id="Q1v-K5-eMD"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -200,10 +203,14 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Upcoming Reminders" id="cqx-gz-zrq"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="daS-Hu-e8y">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <attributedString key="attributedTitle"/>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y49-V8-I36" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1215" y="1096"/>
+            <point key="canvasLocation" x="994" y="1089"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qq5-Gc-GhU">
@@ -228,6 +235,7 @@
         <image name="RemindMeAddButton" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cqc-ov-BYe"/>
+        <segue reference="Q1v-K5-eMD"/>
+        <segue reference="VbI-U6-Dzf"/>
     </inferredMetricsTieBreakers>
 </document>

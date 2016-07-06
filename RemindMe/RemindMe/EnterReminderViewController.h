@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class ReminderEntry;
+
+
 @interface EnterReminderViewController : UIViewController <UITextViewDelegate> {
 
 
@@ -15,6 +18,8 @@
 
 - (IBAction)CancelButtonPressed:(id)sender;
 - (IBAction)SaveButtonPressed:(id)sender;
+
+@property (nonatomic, strong) ReminderEntry *entry;
 
 @property (strong, nonatomic) IBOutlet UITextView *reminderTextField;
 

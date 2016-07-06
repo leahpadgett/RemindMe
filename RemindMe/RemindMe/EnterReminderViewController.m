@@ -26,6 +26,13 @@
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Logo"]];
     
     
+    if (self.entry != nil) {
+        self.reminderTextField.text = self.entry.details;
+        self.datePicker.date = self.entry.date;
+    }
+    
+
+    
 }
 
 
@@ -34,32 +41,42 @@
     
     CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
     ReminderEntry *entry = [NSEntityDescription insertNewObjectForEntityForName:@"ReminderEntry" inManagedObjectContext:coreDataStack.managedObjectContext];
-
-
-    
     entry.details = self.reminderTextField.text;
-    
-   
     entry.date =  self.datePicker.date;
-    
    
     [coreDataStack saveContext];
     
 }
 
-- (IBAction)CancelButtonPressed:(id)sender {
+
+- (void)updateReminderEntry {
+    self.entry.details = self.reminderTextField.text;
+    self.entry.date = self.datePicker.date;
     
+    CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
+    [coreDataStack saveContext];
     
-      [self.navigationController popViewControllerAnimated:YES];
-  
-    
+
 }
+
+- (IBAction)CancelButtonPressed:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
 
 - (IBAction)SaveButtonPressed:(id)sender {
-    [self insertReminderDetails];
-      [self.navigationController popViewControllerAnimated:YES];
-
+    if (self.entry != nil) {
+        [self updateReminderEntry];
+    } else {
+        [self insertReminderDetails];
+    }
+[self.navigationController popViewControllerAnimated:YES];
+    
 }
+
+
+
 
 
 

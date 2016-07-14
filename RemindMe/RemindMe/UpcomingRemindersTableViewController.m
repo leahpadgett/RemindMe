@@ -67,8 +67,30 @@
     
     ReminderEntry *entry = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
+    
+    // Make a date formatter which corresponds exactly with the format of the date in core data
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss Z"];
+    
+    // Get the date from core data
+    NSString *dateString = [[entry valueForKey:@"date"] description];
+
+    
+    // Parse from string to date
+    NSDate *date = [dateFormatter dateFromString:dateString ];
+    
+    // Set the date formatter to the format that I actually want
+//    [dateFormatter setDateFormat:@"dd/MM/yy HH:mm"];
+    [dateFormatter setDateFormat:@"EEE, MMM d, yyyy h:mm a"];
+
+  
+    
     cell.textLabel.text = entry.details;
-    cell.detailTextLabel.text = entry.date.description;
+//    cell.detailTextLabel.text = entry.date.description;
+    
+        // Set the text on the date label
+        cell.detailTextLabel.text = [dateFormatter stringFromDate:date];
+    
     
     return cell;
 }

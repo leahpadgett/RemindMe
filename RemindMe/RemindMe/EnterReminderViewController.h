@@ -13,7 +13,6 @@
 
 @interface EnterReminderViewController : UIViewController <UITextViewDelegate> {
 
-
 }
 
 - (IBAction)CancelButtonPressed:(id)sender;

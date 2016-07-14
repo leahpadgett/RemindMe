@@ -12,7 +12,7 @@
 #import "ReminderEntry+CoreDataProperties.h"
 #import "ReminderEntry.h"
 
-@interface EnterReminderViewController ()
+@interface EnterReminderViewController () <UITextViewDelegate>
 
 
 
@@ -20,21 +20,39 @@
 
 @implementation EnterReminderViewController
 
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _reminderTextField.delegate = self;
     
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Logo"]];
     
     
+  
     if (self.entry != nil) {
         self.reminderTextField.text = self.entry.details;
         self.datePicker.date = self.entry.date;
+     
     }
-    
-
     
 }
 
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range
+ replacementText:(NSString *)text
+{
+    
+    if ([text isEqualToString:@"\n"]) {
+        
+        [textView resignFirstResponder];
+        // Return FALSE so that the final '\n' character doesn't get added
+        return NO;
+    }
+    // For any other character return TRUE so that the text gets added to the view
+    return YES;
+}
 
 
 -(void)insertReminderDetails {
@@ -43,7 +61,7 @@
     ReminderEntry *entry = [NSEntityDescription insertNewObjectForEntityForName:@"ReminderEntry" inManagedObjectContext:coreDataStack.managedObjectContext];
     entry.details = self.reminderTextField.text;
     entry.date =  self.datePicker.date;
-   
+
     [coreDataStack saveContext];
     
 }
@@ -55,6 +73,8 @@
     
     CoreDataStack *coreDataStack = [CoreDataStack defaultStack];
     [coreDataStack saveContext];
+    
+    
     
 
 }
@@ -77,14 +97,19 @@
 
 
 
-
-
+//
+//// Dismiss keyboard when another part of app is touched.
+//- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+//    //hides keyboard when another part of layout was touched
+//    [self.view endEditing:YES];
+//    [super touchesBegan:touches withEvent:event];
+//}
 
 - (IBAction)datePickerAction:(id)sender {
-    
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
-    [dateFormatter setTimeStyle:NSDateFormatterShortStyle];
+//    
+//    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+//    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+//    [dateFormatter setTimeStyle:NSDateFormatterShortStyle];
 
     
 }

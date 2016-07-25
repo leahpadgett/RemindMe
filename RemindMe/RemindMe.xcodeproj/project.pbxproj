@@ -64,8 +64,8 @@
 		224D35F11D00CAE70070F816 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataStack.m; path = RemindMe/CoreDataStack.m; sourceTree = SOURCE_ROOT; };
 		22681CC31CCA689F00FC6EF9 /* RemindMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemindMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22681CC71CCA689F00FC6EF9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		22681CC91CCA689F00FC6EF9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		22681CCA1CCA689F00FC6EF9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		22681CC91CCA689F00FC6EF9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = RemindMe/AppDelegate.h; sourceTree = "<group>"; };
+		22681CCA1CCA689F00FC6EF9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = RemindMe/AppDelegate.m; sourceTree = "<group>"; };
 		22681CCC1CCA689F00FC6EF9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		22681CCD1CCA689F00FC6EF9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		22681CD01CCA689F00FC6EF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -89,10 +89,10 @@
 		22E12B221CE1066100498D03 /* EnterScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterScheduleViewController.m; sourceTree = "<group>"; };
 		22E12B241CE107F300498D03 /* RM logo.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "RM logo.pdf"; sourceTree = "<group>"; };
 		22E26D281D08F2810097DD7F /* RemindMe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RemindMe.xcdatamodel; sourceTree = "<group>"; };
-		22E26D2A1D08F4480097DD7F /* ReminderEntry+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ReminderEntry+CoreDataProperties.h"; path = "RemindMe/ReminderEntry+CoreDataProperties.h"; sourceTree = "<group>"; };
-		22E26D2B1D08F4480097DD7F /* ReminderEntry+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ReminderEntry+CoreDataProperties.m"; path = "RemindMe/ReminderEntry+CoreDataProperties.m"; sourceTree = "<group>"; };
-		22E26D2C1D08F4480097DD7F /* ReminderEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReminderEntry.h; path = RemindMe/ReminderEntry.h; sourceTree = "<group>"; };
-		22E26D2D1D08F4480097DD7F /* ReminderEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReminderEntry.m; path = RemindMe/ReminderEntry.m; sourceTree = "<group>"; };
+		22E26D2A1D08F4480097DD7F /* ReminderEntry+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ReminderEntry+CoreDataProperties.h"; sourceTree = "<group>"; };
+		22E26D2B1D08F4480097DD7F /* ReminderEntry+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ReminderEntry+CoreDataProperties.m"; sourceTree = "<group>"; };
+		22E26D2C1D08F4480097DD7F /* ReminderEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReminderEntry.h; sourceTree = "<group>"; };
+		22E26D2D1D08F4480097DD7F /* ReminderEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReminderEntry.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,10 +129,8 @@
 		22681CBA1CCA689F00FC6EF9 = {
 			isa = PBXGroup;
 			children = (
-				22E26D2A1D08F4480097DD7F /* ReminderEntry+CoreDataProperties.h */,
-				22E26D2B1D08F4480097DD7F /* ReminderEntry+CoreDataProperties.m */,
-				22E26D2C1D08F4480097DD7F /* ReminderEntry.h */,
-				22E26D2D1D08F4480097DD7F /* ReminderEntry.m */,
+				22681CC91CCA689F00FC6EF9 /* AppDelegate.h */,
+				22681CCA1CCA689F00FC6EF9 /* AppDelegate.m */,
 				22681CC51CCA689F00FC6EF9 /* RemindMe */,
 				22681CC41CCA689F00FC6EF9 /* Products */,
 			);
@@ -149,13 +147,18 @@
 		22681CC51CCA689F00FC6EF9 /* RemindMe */ = {
 			isa = PBXGroup;
 			children = (
+				22E26D2A1D08F4480097DD7F /* ReminderEntry+CoreDataProperties.h */,
+				22E26D2B1D08F4480097DD7F /* ReminderEntry+CoreDataProperties.m */,
+				22E26D2C1D08F4480097DD7F /* ReminderEntry.h */,
+				22E26D2D1D08F4480097DD7F /* ReminderEntry.m */,
 				224D35F01D00CAE70070F816 /* CoreDataStack.h */,
 				224D35F11D00CAE70070F816 /* CoreDataStack.m */,
-				22681CC91CCA689F00FC6EF9 /* AppDelegate.h */,
-				22681CCA1CCA689F00FC6EF9 /* AppDelegate.m */,
 				22681CCC1CCA689F00FC6EF9 /* ViewController.h */,
 				22681CCD1CCA689F00FC6EF9 /* ViewController.m */,
-				226C0ECE1D032B9B005E121E /* Enter Reminder View Controller */,
+				22E12B1E1CE0F0EF00498D03 /* EnterReminderViewController.h */,
+				22E12B1F1CE0F0EF00498D03 /* EnterReminderViewController.m */,
+				22E12B181CE0EB5E00498D03 /* UIPlaceHolderTextView.h */,
+				22E12B191CE0EB5E00498D03 /* UIPlaceHolderTextView.m */,
 				22E12B211CE1066100498D03 /* EnterScheduleViewController.h */,
 				22E12B221CE1066100498D03 /* EnterScheduleViewController.m */,
 				22B214901CE109C900B7E242 /* UpcomingRemindersTableViewController.h */,
@@ -187,17 +190,6 @@
 				22681CC71CCA689F00FC6EF9 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		226C0ECE1D032B9B005E121E /* Enter Reminder View Controller */ = {
-			isa = PBXGroup;
-			children = (
-				22E12B1E1CE0F0EF00498D03 /* EnterReminderViewController.h */,
-				22E12B1F1CE0F0EF00498D03 /* EnterReminderViewController.m */,
-				22E12B181CE0EB5E00498D03 /* UIPlaceHolderTextView.h */,
-				22E12B191CE0EB5E00498D03 /* UIPlaceHolderTextView.m */,
-			);
-			name = "Enter Reminder View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

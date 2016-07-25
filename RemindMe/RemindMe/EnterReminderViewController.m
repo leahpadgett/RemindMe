@@ -93,17 +93,81 @@
     }
 [self.navigationController popViewControllerAnimated:YES];
     
+    
+    // local notifications
+    self.datePicker.timeZone = [NSTimeZone defaultTimeZone];
+    NSDate *date = [self.datePicker date];
+    NSString *detailsBody = self.reminderTextField.text;
+    UILocalNotification *note = [[UILocalNotification alloc] init];
+    note.alertBody = detailsBody;
+    note.fireDate = date;
+    note.timeZone = [NSTimeZone defaultTimeZone];
+    note.applicationIconBadgeNumber = 1;
+    note.soundName = UILocalNotificationDefaultSoundName;
+    //schedule the notification:
+    UIApplication *app = [UIApplication sharedApplication];
+    // Clear out the old notification before scheduling a new one.
+    [app cancelAllLocalNotifications];
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeAlert) categories:nil];
+    [app registerUserNotificationSettings:settings];
+    [app scheduleLocalNotification:note];
+    
 }
 
 
-
+//-(void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
 //
-//// Dismiss keyboard when another part of app is touched.
-//- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-//    //hides keyboard when another part of layout was touched
-//    [self.view endEditing:YES];
-//    [super touchesBegan:touches withEvent:event];
+//    if (application.applicationState == UIApplicationStateActive) {
+//        // inside app
+//
+//        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Notification" message:notification.alertBody preferredStyle:UIAlertControllerStyleAlert];
+//
+//        UIAlertAction *ignoreAction = [UIAlertAction actionWithTitle:@"Ignore" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+//            NSLog(@"Ignore");
+//        }];
+//
+//        UIAlertAction *viewAction = [UIAlertAction actionWithTitle:@"View" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//            [self takeActionWithLocalNotification:notification];
+//        }];
+//
+//        [alertController addAction:ignoreAction];
+//        [alertController addAction:viewAction];
+//
+//        [self.window.rootViewController presentViewController:alertController animated:YES completion:^{
+//
+//        }];
+//
+//    } else {
+//        // outside app
+//        [self takeActionWithLocalNotification:notification];
+//    }
 //}
+//
+//
+//
+//-(void)takeActionWithLocalNotification:(UILocalNotification *)localNotification {
+//    NSNumber *notification_id = localNotification.userInfo[@"id"];
+//
+//
+//    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Action Taken" message:[NSString stringWithFormat:@"We are viewing notification %@", notification_id] preferredStyle:UIAlertControllerStyleAlert];
+//
+//    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//        NSLog(@"OK");
+//    }];
+//
+//    [alertController addAction:okAction];
+//
+//    [self.window.rootViewController presentViewController:alertController animated:YES completion:^{
+//    }];
+//
+//}
+
+
+
+
+
+
+
 
 - (IBAction)datePickerAction:(id)sender {
 //    

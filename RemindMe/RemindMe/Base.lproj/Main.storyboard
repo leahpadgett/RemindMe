@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="tSq-1c-e8F">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="tSq-1c-e8F">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="SourceSansPro-Regular.otf">
+            <string>SourceSansPro-Regular</string>
             <string>SourceSansPro-Regular</string>
             <string>SourceSansPro-Regular</string>
         </mutableArray>
@@ -32,12 +33,18 @@
                                 <items>
                                     <navigationItem id="aUn-RW-wPb">
                                         <nil key="title"/>
-                                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QIU-uh-BXr">
-                                            <rect key="frame" x="82" y="7" width="156" height="30"/>
+                                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="QIU-uh-BXr">
+                                            <rect key="frame" x="82" y="5.5" width="156" height="33"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="16"/>
-                                            <state key="normal" title="Upcoming Reminders">
-                                                <color key="titleColor" red="0.25490196079999999" green="0.14117647059999999" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <state key="normal">
+                                                <attributedString key="attributedTitle">
+                                                    <fragment content="My Reminders">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.25490196079999999" green="0.14117647059999999" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="16" name="SourceSansPro-Regular"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
                                             </state>
                                             <connections>
                                                 <segue destination="Xpd-FJ-1fq" kind="push" id="VbI-U6-Dzf"/>
@@ -83,15 +90,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="X3B-jz-B9X">
-                                <rect key="frame" x="0.0" y="352" width="320" height="216"/>
-                                <date key="date" timeIntervalSinceReferenceDate="488489384.35627502">
-                                    <!--2016-06-24 19:29:44 +0000-->
-                                </date>
-                                <connections>
-                                    <action selector="datePickerAction:" destination="h39-PL-r70" eventType="valueChanged" id="SBj-ff-59g"/>
-                                </connections>
-                            </datePicker>
                             <textView multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" keyboardDismissMode="interactive" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fzM-FS-wLg" customClass="UIPlaceHolderTextView">
                                 <rect key="frame" x="40" y="110" width="240" height="185"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -99,11 +97,22 @@
                                 <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="yes" keyboardAppearance="light" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textView>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="X3B-jz-B9X">
+                                <rect key="frame" x="0.0" y="303" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="488489384.35627502">
+                                    <!--2016-06-24 19:29:44 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="datePickerAction:" destination="h39-PL-r70" eventType="valueChanged" id="SBj-ff-59g"/>
+                                </connections>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="fzM-FS-wLg" firstAttribute="top" secondItem="kkA-mu-105" secondAttribute="bottom" constant="46" id="BSd-bn-1S2"/>
+                            <constraint firstItem="X3B-jz-B9X" firstAttribute="top" secondItem="fzM-FS-wLg" secondAttribute="bottom" constant="8" symbolic="YES" id="DCG-aB-uac"/>
                             <constraint firstItem="Vex-RN-3tZ" firstAttribute="top" secondItem="fzM-FS-wLg" secondAttribute="bottom" constant="241" id="IOP-zi-he7"/>
+                            <constraint firstItem="X3B-jz-B9X" firstAttribute="centerX" secondItem="2eD-Wh-cvU" secondAttribute="centerX" id="YBl-ci-SYJ"/>
                             <constraint firstItem="fzM-FS-wLg" firstAttribute="centerX" secondItem="2eD-Wh-cvU" secondAttribute="centerX" id="ekN-V1-QJP"/>
                             <constraint firstItem="fzM-FS-wLg" firstAttribute="leading" secondItem="2eD-Wh-cvU" secondAttribute="leadingMargin" constant="24" id="icl-va-WwC"/>
                             <constraint firstItem="fzM-FS-wLg" firstAttribute="centerX" secondItem="2eD-Wh-cvU" secondAttribute="centerX" id="xmQ-uQ-Is1"/>
@@ -159,34 +168,34 @@
             </objects>
             <point key="canvasLocation" x="1670" y="304"/>
         </scene>
-        <!--Upcoming Reminders-->
+        <!--My Reminders-->
         <scene sceneID="Vfc-n7-Ja0">
             <objects>
                 <tableViewController id="Xpd-FJ-1fq" customClass="UpcomingRemindersTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="76" sectionHeaderHeight="28" sectionFooterHeight="28" id="lC6-OR-Bls">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="6" reuseIdentifier="Cell" textLabel="Er0-8W-CWg" detailTextLabel="qyI-0E-8bf" rowHeight="61" style="IBUITableViewCellStyleSubtitle" id="KwG-jf-cbG">
-                                <rect key="frame" x="0.0" y="92" width="320" height="61"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="61"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KwG-jf-cbG" id="6UN-WZ-Gqj">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="60.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Er0-8W-CWg">
-                                            <rect key="frame" x="15" y="14" width="31.5" height="19.5"/>
+                                            <rect key="frame" x="15" y="15" width="26.5" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="14"/>
+                                            <color key="textColor" red="0.25490196079999999" green="0.14117647059999999" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qyI-0E-8bf">
-                                            <rect key="frame" x="15" y="33.5" width="40.5" height="13.5"/>
+                                            <rect key="frame" x="15" y="33" width="36.5" height="14"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="11"/>
+                                            <color key="textColor" red="0.062745098039215685" green="0.67450980392156867" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -202,7 +211,12 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Upcoming Reminders" id="cqx-gz-zrq"/>
+                    <navigationItem key="navigationItem" title="My Reminders" id="iqE-2Z-M5w">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="7af-sP-0Ov">
+                            <color key="tintColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="daS-Hu-e8y">
                         <autoresizingMask key="autoresizingMask"/>
@@ -236,7 +250,7 @@
         <image name="RemindMeAddButton" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="J5Y-rt-k8w"/>
         <segue reference="VbI-U6-Dzf"/>
+        <segue reference="J5Y-rt-k8w"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -25,7 +25,21 @@
     
     [self.fetchedResultsController performFetch:nil];
     
+   self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:65 / 255.0 green:36 / 255.0 blue:129 / 255.0 alpha:1];
+    
+//    [self.navigationController.navigationBar setBackgroundColor:[UIColor colorWithRed:65 / 255.0 green:36 / 255.0 blue:129 / 255.0 alpha:1]];
+    
+    CGRect frame = CGRectMake(0, 0, 400, 44);
+    UILabel *label = [[UILabel alloc] initWithFrame:frame];
+    label.backgroundColor = [UIColor clearColor];
+    label.font = [UIFont fontWithName:@"SourceSansProRegular" size:12.0];
+    label.textAlignment = UITextAlignmentCenter;
+    label.textColor = [UIColor colorWithRed:65 / 255.0 green:36 / 255.0 blue:129 / 255.0 alpha:1];
+    label.text = @"My Reminders ";
+    self.navigationItem.titleView = label;
+    
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
     
     
 }
